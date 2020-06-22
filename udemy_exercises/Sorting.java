@@ -48,7 +48,6 @@ class Sorting {
 
         mySorting.printNums();
         mySorting.sortIntegers(mySorting.numArray);
-        System.out.println(mySorting.getNums());
 
         s.close();
     }
