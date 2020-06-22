@@ -1,11 +1,9 @@
-package bank;
+package udemy_exercises.bank;
 
 public class Branch {
 }
 
 /*
-**Branch Class**:
-     - addCustomer and initial transaction amount.
-     - Also needs to add additional transactions for that customer/branch
-*/
-
+ ** Branch Class**: - addCustomer and initial transaction amount. - Also needs to
+ * add additional transactions for that customer/branch
+ */
