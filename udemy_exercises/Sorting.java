@@ -18,6 +18,15 @@ class Sorting {
 
     int[] getNums() {
 
+        Scanner s = new Scanner(System.in);
+
+        System.out.println("Please enter 10 numbers");
+        for (int i = 0; i < 10; i++) {
+            numArray[i] = s.nextInt();
+        }
+
+        s.close();
+
         return numArray;
     }
 
@@ -38,18 +47,8 @@ class Sorting {
 
         Sorting mySorting = new Sorting();
 
-        Scanner s = new Scanner(System.in);
-
-        System.out.println("This is the Sorting Class");
-        System.out.println("Please enter 10 numbers");
-        for (int i = 0; i < 10; i++) {
-            mySorting.numArray[i] = s.nextInt();
-        }
-
         mySorting.printNums();
         mySorting.sortIntegers(mySorting.numArray);
-
-        s.close();
     }
 
 }
