@@ -11,22 +11,6 @@ class Contact {
         this.phNum = phNum;
     }
 
-    public void saveContact() {
-
-    }
-
-    public void modifyContact() {
-
-    }
-
-    public void searchContact() {
-
-    }
-
-    public void removeContact() {
-
-    }
-
 }
 
 /*
