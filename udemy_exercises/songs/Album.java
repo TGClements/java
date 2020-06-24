@@ -1,19 +1,42 @@
 package udemy_exercises.songs;
 
-class Album {
+import java.util.*;
 
+public class Album {
+
+  Scanner s, sc;
+  String albumName;
+  ArrayList<Song> songList = new ArrayList<Song>();
+
+  public Album(String name) {
+    this.albumName = name;
+    s = new Scanner(System.in);
+    sc = new Scanner(System.in);
+  }
+
+  public void addSong() {
+    System.out.print("Enter song name: ");
+    String songName = s.nextLine();
+    System.out.print("Enter song duration: ");
+    double duration = sc.nextDouble();
+
+    int songIndex = getSong(songName);
+
+    if (songIndex == -1) {
+      songList.add(new Song(songName, duration));
+    } else {
+      System.out.println("Song already exists! Please try again.");
+    }
+  }
+
+  int getSong(String name) {
+
+    for (int i = 0; i < songList.size(); i++) {
+      if (songList.get(i).title.equals(name)) {
+        return i;
+      }
+    }
+
+    return -1;
+  }
 }
-
-/*
-**Song Player w/ Java Classes**
-     - **Album class** 
-       - Playlist of **Songs**.
-       - addPlayist() (songs must appear in the list in the order by which they were added)
-       - stop()
-       - nextSong()
-       - previousSong()
-       - repeatSong()
-       - showPlaylist()
-       - removePlaylist()
-     - **A song must exist in an album before it can be added to the playlist (so you can only play songs that you own.)**
-*/
